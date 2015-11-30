@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Pairs.java&apos; to &apos;HackerRank/src/(default package)&apos;&#x0A;- Original project: &apos;HackerRank&apos;&#x0A;- Destination element: &apos;HackerRank/src/(default package)&apos;&#x0A;- Original element: &apos;Pairs.java&apos;" description="Copy compilation unit" destination="/src&lt;" element1="/src&lt;{Pairs.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1447160796828" units="1" version="1.0"/>
+</session>

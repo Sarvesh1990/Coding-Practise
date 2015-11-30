@@ -1,0 +1,125 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class RedBlack
+{
+    public:
+    int key;
+    RedBlack * top;
+    RedBlack * left;
+    RedBlack * right;
+    bool color;
+    RedBlack(int Key, RedBlack * Top, RedBlack * Left, RedBlack * Right, bool Color)
+    {
+        key = Key;
+        top = Top;
+        left = Left;
+        right = Right;
+        color = Color;
+    }
+    
+};
+
+void Insert(RedBlack * head, int key);
+void RotateRight(RedBlack * head);
+void RotateLeft(RedBlack * head);
+void ColorFlip(RedBlack * head);
+
+int main()
+{
+    RedBlack * head = new RedBlack(32, NULL, NULL, NULL, false);
+    Insert(head, 11);
+    Insert(head, 37);
+    cout<<"Color of head is "<<head->color<<" and head right key is "<< head->right->key<<endl;
+}
+
+void Insert (RedBlack * head, int Key)
+{
+    if(!head->right && !head->left)
+    {
+        head->left=new RedBlack(Key, head, NULL, NULL, true);
+        if(!head->color) return;
+        else
+        {
+            RotateRight(head);
+            ColorFlip(head);
+        }
+        return;
+    }
+    else if (!head->right && head->left)
+    {
+        if(Key>head->key)
+        {
+            head->right=new RedBlack(Key, head, NULL, NULL, true);
+            ColorFlip(head);
+        }
+        else if(Key<head->left->key)
+        {
+            head->left->left=new RedBlack(Key, head->left, NULL, NULL, true);
+            if(!head->left->color)
+            {
+                return;
+            }
+            else
+            {
+                RotateRight(head->left);
+                ColorFlip(head);
+            }
+        }
+        else
+        {
+            head->left->right=new RedBlack(Key, head->left, NULL, NULL, true);
+            RotateLeft(head->left);
+            RotateRight(head->left);
+            ColorFlip(head);
+        }
+        return;
+    }
+    else if (head->right && head->left)
+    {
+        return;
+    }
+    else 
+    {
+        cout<<"Kuch toh pange hain"<<endl;
+        return;
+    }
+}
+
+void RotateRight(RedBlack * head)
+{
+    head->top->left=head->right;
+    head->right=head->top;
+    head->top->top->left = head;
+    head->top=head->top->top;
+    head->right->top=head;
+    head->color=false;
+    head->right->color=true;
+    head=head->top;
+    return ;
+}
+
+void RotateLeft(RedBlack * head)
+{
+    if(head->top->left=head)
+    {
+        head->top->left=head->right;
+    }
+    else
+    {
+        head->top->right=head->right;
+    }
+    head->right->top=head->top;
+    head->top=head->right;
+    head->right=head->right->left;
+    head->top->left=head;
+}
+void ColorFlip(RedBlack * head)
+{
+    head->left->color=false;
+    head->right->color=false;
+    head->color=true;
+    return ;
+}
+

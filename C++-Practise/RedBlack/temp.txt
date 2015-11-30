@@ -1,0 +1,61 @@
+Creating node for key S
+Creating node for key E
+Checking tree calling with head key S
+Check tree called for head key S
+Neither left nor right
+Inside check, head->left is there 
+Head is S
+S
+Left is there with left E
+Creating node for key A
+Checking tree calling with head key E
+Check tree called for head key E
+Neither left nor right
+Inside check, head->left is there 
+Inside check, both head and head->left are colored
+Inside check, top found
+Rotate right called
+Color flip called
+Inside color flip, head key is E
+Head is E
+Inside right
+Creating node for key R
+Checking tree calling with head key S
+Check tree called for head key S
+Neither left nor right
+Inside check, head->left is there 
+Check tree called for head key E
+Inside check, head->left is there 
+Head is E
+Head is E
+Left is there with left A
+Inside right
+Creating node for key C
+Check tree called for head key A
+Inside else if, Rotating left with head key A
+Top found
+Left rotation done with head key C and top 0x1a2dc040
+Inside check, head->left is there 
+Check tree called for head key E
+Inside check, head->left is there 
+Head is E
+Head is E
+Inside right
+Left is there with left R
+Creating node for key H
+Checking tree calling with head key R
+Check tree called for head key R
+Neither left nor right
+Inside check, head->left is there 
+Inside check, both head and head->left are colored
+Inside check, top found
+Rotate right called
+Color flip called
+Inside color flip, head key is R
+Check tree called for head key E
+Rotating left with head key E head left C right 0x1a2dc0a0
+R and E
+Inside check, head->left is there 
+Head is R
+Head is R
+Color of head is 0 and head right key is S

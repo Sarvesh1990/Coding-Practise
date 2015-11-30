@@ -1,0 +1,1 @@
+Insert number of soldiers within 1 to 10
