@@ -1,1 +1,0 @@
-ALLOWED_COUNT = 5
