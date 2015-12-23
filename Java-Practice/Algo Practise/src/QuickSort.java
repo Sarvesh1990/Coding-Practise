@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class QuickSort {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int [] unSortedArray = {0, 3, 1, 2, 13, 5, 9, 6, 4, 8, 4, 3, 1, 5, 9, 8, 17, 12};
+		int [] unSortedArray = {0, 3, 1, 2, 13, 9, 6, 4, 8, 4, 3, 1, 5, 9, 8, 17, 12};
 		int [] sortedArray = QuickSort(unSortedArray, 0, unSortedArray.length - 1);
 		System.out.println("Sorted array is "+ Arrays.toString(sortedArray));
 
@@ -22,19 +22,10 @@ public class QuickSort {
 				unSortedArray[j] = temp;
 			}
 		}
-		int [] leftSortedArray = QuickSort(unSortedArray, start, i-1);
-		int [] rightSortedArray = QuickSort(unSortedArray, i+1, end);
+		unSortedArray = QuickSort(unSortedArray, start, i-1);
+		unSortedArray = QuickSort(unSortedArray, i+1, end);
 		
-		int [] sortedArray = new int [unSortedArray.length];
-		int j;
-		for(j = start; j < i; j++){
-			sortedArray[j] = leftSortedArray[j];
-		}
-		sortedArray[j] = unSortedArray[i];
-		for(j = i+1; j<=end; j++){
-			sortedArray[j] = rightSortedArray[j];
-		}
-		return sortedArray;
+		return unSortedArray;
 	}
 
 }
