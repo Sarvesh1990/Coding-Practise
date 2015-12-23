@@ -19,7 +19,7 @@ public class HeapSort {
 	}
 	
 	private static int [] HeapSort(int [] heapifiedArray){
-		for(int i = heapifiedArray.length - 1 ; i >= 0; i--	 ){
+		for(int i = heapifiedArray.length - 1 ; i > 0; i--	 ){
 			int temp = heapifiedArray[0];
 			heapifiedArray[0] = heapifiedArray[i];
 			heapifiedArray[i] = temp;
