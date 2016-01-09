@@ -1,0 +1,4 @@
+nose
+httpretty
+sure
+wheel

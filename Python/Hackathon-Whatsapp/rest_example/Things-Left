@@ -1,0 +1,6 @@
+Things left to do :
+
+1. Improve conversation API, right now it loops through all messages, think if new table required.
+2. Conversation API shows only last incoming message and not outgoing. Consider both.
+3. Pagination code see again
+4. Code  improvement and commenting
